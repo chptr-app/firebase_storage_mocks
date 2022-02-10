@@ -55,7 +55,7 @@ class MockReference extends Mock implements Reference {
 
   @override
   Future<String> getDownloadURL() {
-    throw Future.value('http://${_storage.bucket}$_path');
+    return Future.value('http://${_storage.bucket}$_path');
   }
 
   @override
