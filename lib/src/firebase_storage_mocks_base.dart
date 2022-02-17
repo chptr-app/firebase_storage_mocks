@@ -17,6 +17,12 @@ class MockFirebaseStorage extends Mock implements FirebaseStorage {
   }
 
   @override
+  Reference refFromURL([String? path]) {
+    path ??= '/';
+    return MockReference(this, path);
+  }
+
+  @override
   String get bucket => 'some-bucket';
 }
 
